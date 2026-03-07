@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://djcdrg8ghy3l0"]
 
 [ext_resource type="PackedScene" uid="uid://dg60gtfskfdcn" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://drmabiesjksit" path="res://scenes/large_house.tscn" id="3_jyhfs"]
 
 [node name="Main" type="Node2D" unique_id=1374977063]
+
+[node name="LargeHouse" parent="." unique_id=864966736 instance=ExtResource("3_jyhfs")]
 
 [node name="Player" parent="." unique_id=309665027 instance=ExtResource("1_o5qli")]
 position = Vector2(589, 306)
