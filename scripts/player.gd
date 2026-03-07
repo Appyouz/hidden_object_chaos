@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _physics_process(delta: float) -> void:
@@ -11,8 +12,15 @@ func _physics_process(delta: float) -> void:
 func process_movement() -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	var direction := Input.get_vector("left", "right","up", "down")
+	velocity = direction * SPEED
+	play_animation(direction)
+
+func play_animation(dir: Vector2) -> void:
+	if dir.x != 0:
+		animated_sprite_2d.flip_h = dir.x < 0;
+		animated_sprite_2d.play("run_right")
+	elif dir.y < 0:
+		animated_sprite_2d.play("run_up")
+	elif dir.y > 0:
+		animated_sprite_2d.play("run_down")

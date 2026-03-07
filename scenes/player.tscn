@@ -294,6 +294,7 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=171981839]
 sprite_frames = SubResource("SpriteFrames_3vyb7")
-animation = &"run_down"
+animation = &"run_right"
 autoplay = "idle_down"
-frame_progress = 0.14457972
+frame_progress = 0.3117335
+flip_h = true
