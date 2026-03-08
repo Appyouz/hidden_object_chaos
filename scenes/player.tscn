@@ -299,7 +299,7 @@ script = ExtResource("1_g2els")
 sprite_frames = SubResource("SpriteFrames_3vyb7")
 animation = &"run_right"
 autoplay = "idle_down"
-frame_progress = 0.19763312
+frame_progress = 0.24362254
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1331321891]
