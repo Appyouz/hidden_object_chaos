@@ -5,3 +5,13 @@ visible = false
 offset_right = 1153.0
 offset_bottom = 643.0
 color = Color(0.4554031, 1.0769255e-06, 2.1658838e-07, 1)
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=949805284]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Game over!"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

@@ -17,6 +17,11 @@ func process_movement() -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_vector("left", "right","up", "down")
+	if Main.npc_is_awake and direction != Vector2.ZERO:
+		velocity = Vector2.ZERO
+		Main.restart_game()
+		return
+		
 	if Input.is_action_just_pressed("interact"):
 		is_freezed = !is_freezed
 		
